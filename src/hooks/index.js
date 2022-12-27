@@ -1,3 +1,4 @@
+export * from './convertElementsToDateEvents'
 export * from './useAuthStore'
 export * from './useCalendarStore'
 export * from './useForm'

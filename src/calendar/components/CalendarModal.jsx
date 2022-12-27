@@ -31,8 +31,8 @@ export const CalendarModal = () => {
   const { activeEvent, startSavingEvent } = useCalendarStore()
 
   const [formValues, setFormValues] = useState({
-    title: 'Sebastian',
-    notes: 'Hay que comprar pastel',
+    title: '',
+    notes: '',
     start: new Date(),
     end: addHours(new Date(), 2),
   })
@@ -40,7 +40,7 @@ export const CalendarModal = () => {
   const titleClass = useMemo(() => {
     if (formSubmitted) return ''
 
-    return formValues.title.length > 0 ? ' ' : 'is-invalid'
+    return formValues.title.length > 0 ? '' : 'is-invalid'
   }, [formValues.title, formSubmitted])
 
   useEffect(() => {
